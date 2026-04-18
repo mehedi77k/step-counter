@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/widget_card_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY"
+                android:textStyle="bold"
+                android:textColor="#6E6A93"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/widget_steps_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8,432"
+                android:textStyle="bold"
+                android:textColor="#3348E8"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/widget_goal_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/10,000"
+                android:textColor="#43406A"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/widget_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="84%"
+                android:textColor="#3348E8"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/widget_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="412 kcal"
+                android:textColor="#46426F"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6.2 km"
+                android:textColor="#46426F"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="54 min"
+                android:textColor="#46426F"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/widget_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="8dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="84"
+        android:progressDrawable="@drawable/widget_progress_drawable" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/widget_btn_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/widget_btn_water"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+</LinearLayout>

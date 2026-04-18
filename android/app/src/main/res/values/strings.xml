@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Daily activity snapshot</string>
+    <string name="widget_description_compact">Compact daily steps</string>
+    <string name="widget_description_wide">Wide daily activity snapshot</string>
+    <string name="widget_description_tall">Tall daily activity snapshot</string>
+    <string name="widget_description_xl">Extra large activity dashboard</string>
+</resources>
