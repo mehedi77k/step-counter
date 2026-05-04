@@ -1,62 +1,131 @@
-# 🚶‍♂️ Step Counter - Kinetic Pulse
+# Step Counter - Kinetic Pulse
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen?style=for-the-badge)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-A modern Flutter-based step counter application that tracks daily steps in real time and helps users monitor their fitness activity with a clean, responsive, and user-friendly interface.
-
----
-
-# 📱 Overview
-
-**Step Counter - Kinetic Pulse** is a fitness tracking app built using Flutter and Dart.
-
-This app counts the user's steps in real time using the device step sensor and displays useful health-related information such as daily steps, distance, calories burned, active minutes, goal progress, weekly activity, and monthly activity.
-
-The main goal of this project is to provide a simple, beautiful, and practical step tracking experience for users who want to monitor their daily movement and fitness progress.
+A modern Flutter-based step counter application that tracks daily steps in real time, monitors fitness activity, supports Android background tracking, and provides home-screen widget integration.
 
 ---
 
-# ✨ Key Highlights
+## Overview
 
-- 🚶 Real-time step counting
-- 🎯 Daily step goal tracking
-- 📊 Weekly and monthly activity overview
-- 🔥 Calories burned estimation
-- 📍 Distance calculation
-- ⏱️ Active minutes tracking
-- 📅 Date-wise activity history
-- 🌙 Light and dark theme support
-- 📱 Clean and modern mobile UI
-- 🏠 Android home widget support
-- 🔔 Step alert and notification settings
-- ⚙️ Background tracking support on Android
-- 💾 Local data saving using SharedPreferences
+**Step Counter - Kinetic Pulse** is a completed fitness tracking application built with **Flutter** and **Dart**.
+
+The app uses the device step sensor to count steps in real time and provides useful activity metrics such as daily steps, distance walked, calories burned, active minutes, goal progress, weekly activity, and monthly activity.
+
+It also includes Android-specific features such as foreground service support, background step tracking, notification alerts, battery optimization guidance, and home-screen widgets.
+
+The goal of this project is to provide a clean, responsive, and practical step tracking experience for users who want to monitor their daily movement and fitness progress.
 
 ---
 
-# 🚀 Features
+## Key Features
 
-## 🏠 Dashboard
+- Real-time step counting
+- Daily step goal tracking
+- Weekly and monthly activity overview
+- Distance calculation
+- Calories burned estimation
+- Active minutes tracking
+- Date-wise activity history
+- Light and dark theme support
+- Clean modern Flutter UI
+- Android foreground service support
+- Background step tracking
+- Android home-screen widget support
+- Step milestone alerts
+- Quiet hours for notifications
+- Battery optimization guidance
+- Local data persistence using SharedPreferences
 
-The dashboard gives users a quick overview of their daily fitness activity.
+---
+
+## Application Screens
+
+The app includes the following main sections:
+
+| Screen | Description |
+|---|---|
+| Dashboard | Shows today's steps, goal progress, distance, calories, and active minutes |
+| Activity | Displays weekly and monthly activity summaries |
+| Goals | Allows users to view and manage daily step goals |
+| Settings | Provides tracking, notification, background service, and widget options |
+
+---
+
+## System Architecture
+
+```text
+Device Step Sensor
+        │
+        ▼
+Flutter Application
+        │
+        ├── Step Tracking Controller
+        │   ├── Real-time step updates
+        │   ├── Daily step calculation
+        │   ├── Weekly and monthly history
+        │   └── Local data storage
+        │
+        ├── Dashboard UI
+        │   ├── Step count
+        │   ├── Goal progress
+        │   ├── Distance
+        │   ├── Calories
+        │   └── Active minutes
+        │
+        └── Android Native Layer
+            ├── Foreground service
+            ├── Background tracking
+            ├── Notification alerts
+            └── Home-screen widgets
+```
+
+---
+
+## Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Framework | Flutter |
+| Language | Dart |
+| Native Android | Kotlin |
+| UI | Material Design, Google Fonts |
+| Step Tracking | pedometer |
+| Permissions | permission_handler |
+| Local Storage | shared_preferences |
+| Date Formatting | intl |
+| Platform Support | Android, Web, Windows, Linux, macOS, iOS |
+
+---
+
+## Core Features
+
+### Dashboard
+
+The dashboard provides a real-time summary of the user's daily fitness activity.
+
+Features include:
 
 - Today's total steps
 - Circular step progress indicator
-- Daily step goal progress
+- Daily goal progress
 - Distance walked in kilometers
 - Calories burned
 - Active minutes
-- Live step tracking status
-- Simple and clean activity summary
+- Live tracking status
+- Clean activity summary cards
 
 ---
 
-## 📊 Activity Tracking
+### Activity Tracking
 
-The activity section helps users understand their movement history.
+The activity section helps users understand movement patterns over time.
+
+Features include:
 
 - Weekly activity overview
 - Monthly activity overview
@@ -68,80 +137,105 @@ The activity section helps users understand their movement history.
 
 ---
 
-## 🎯 Goals
+### Goal Tracking
 
-The goals section helps users stay motivated.
+The goals section helps users stay consistent with their daily fitness targets.
+
+Features include:
 
 - Daily step goal
-- Goal progress tracking
-- Fitness target monitoring
-- Encouragement to complete daily activity
+- Goal progress monitoring
+- Fitness target tracking
+- Visual progress feedback
+- Motivation-focused interface
 
 ---
 
-## ⚙️ Settings
+### Settings
 
-The settings section includes useful controls for tracking and notifications.
+The settings section provides control over tracking behavior, alerts, widgets, and background service options.
+
+Features include:
 
 - Step tracking settings
-- Background tracking option
+- Background tracking controls
 - Step alert configuration
+- Alert interval configuration
 - Quiet hours support
-- Battery optimization guide
 - Notification permission handling
-- Widget guide option
+- Battery optimization guidance
+- Widget setup guidance
 
 ---
 
-## 🏠 Android Widget Support
+### Android Background Tracking
 
-The app supports Android widget-related features so users can quickly view their step information.
+The app includes Android background tracking support using native Kotlin code.
 
-- Home screen widget support
-- Widget setup guide
-- Background service support
-- Quick step information access
+Features include:
+
+- Foreground service for continuous tracking
+- Persistent notification support
+- Background step count updates
+- Boot and restart handling
+- Battery optimization guidance
+- Background service status monitoring
+
+> Background tracking behavior may vary depending on Android version, device manufacturer, and battery optimization settings.
 
 ---
 
-## 🔔 Step Alerts
+### Android Home-Screen Widgets
 
-The app includes step alert settings to help users stay active.
+The app supports Android widget functionality so users can view step information directly from the home screen.
+
+Features include:
+
+- Home-screen step widget support
+- Step count display
+- Goal progress display
+- Distance and calorie information
+- Widget refresh support
+- Multiple widget layout support
+
+---
+
+### Step Alerts
+
+The app includes step alert settings to help users stay active throughout the day.
+
+Features include:
 
 - Enable or disable step alerts
-- Set step alert interval
-- Configure quiet hours
-- Avoid alerts during rest time
+- Configure alert interval
+- Milestone-based step notifications
+- Quiet hours support
+- Notification permission handling
 
 ---
 
-## 🛠️ Technology Stack
+## Calculations Used
 
-## Frontend
+The app estimates activity metrics using step-based formulas.
 
-- **Flutter** - Cross-platform UI framework
-- **Dart** - Programming language
-- **Material Design** - Modern UI components
-- **Google Fonts** - Beautiful typography
+```text
+Distance:
+steps × 0.00075 = distance in kilometers
 
-## Step Tracking & Storage
+Calories:
+steps × 0.04 = calories burned
 
-- **pedometer** - Real-time step sensor data
-- **permission_handler** - Permission management
-- **shared_preferences** - Local data storage
-- **intl** - Date and number formatting
+Active Minutes:
+steps ÷ 120 = active minutes
+```
 
-## Android Native Support
-
-- Kotlin native code
-- Foreground service
-- Home screen widget support
-- Background tracking support
-- Battery optimization handling
+These calculations are approximate. Actual values may vary depending on the user's height, weight, walking speed, stride length, and walking style.
 
 ---
 
-# 📦 Key Packages
+## Dependencies
+
+The project uses the following major Flutter packages:
 
 ```yaml
 dependencies:
@@ -158,17 +252,17 @@ dependencies:
 
 ---
 
-# 📋 Prerequisites
+## Prerequisites
 
-Before running this project, make sure you have installed:
+Before running this project, make sure the following tools are installed:
 
 - Flutter SDK
 - Dart SDK
-- Android Studio or VS Code
+- Android Studio or Visual Studio Code
 - Android emulator or physical Android device
 - Git
 
-Check Flutter installation:
+Check your Flutter installation:
 
 ```bash
 flutter doctor
@@ -176,27 +270,39 @@ flutter doctor
 
 ---
 
-# ⚙️ Installation & Setup
+## Installation and Setup
 
-## 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/mehedi77k/step-counter.git
 cd step-counter
 ```
 
-## 2️⃣ Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 flutter pub get
 ```
 
-## 3️⃣ Run the App
+### 3. Check Available Devices
+
+```bash
+flutter devices
+```
+
+### 4. Run the App
 
 For Android:
 
 ```bash
 flutter run
+```
+
+For a specific device:
+
+```bash
+flutter run -d <device-id>
 ```
 
 For Web:
@@ -211,207 +317,122 @@ For Windows:
 flutter run -d windows
 ```
 
-To see available devices:
-
-```bash
-flutter devices
-```
-
-Run on a specific device:
-
-```bash
-flutter run -d <device-id>
-```
-
 ---
 
-## 📁 Project Structure
+## Android Permission Requirements
 
-```text
-step-counter/
-│
-├── android/                        
-├── ios/                            
-├── web/                             
-├── windows/                      
-├── macos/                           
-├── linux/                          
-├── test/                           
-│
-├── lib/
-│   ├── main.dart                    
-│   │
-│   └── src/
-│       └── modules/
-│           ├── step_tracker_controller.part.dart   
-│           ├── settings.part.dart                  
-│           └── shared_widgets.part.dart            
-│
-├── pubspec.yaml                     
-├── pubspec.lock                     
-├── analysis_options.yaml           
-└── README.md                        
-```
-
----
-
-# 🔐 Required Permissions
-
-The app may require the following permissions depending on the platform:
-
-### Android
+The app may require the following permissions depending on the Android version:
 
 - Activity Recognition permission
 - Notification permission
 - Foreground service permission
 - Background activity permission
-- Battery optimization exemption for better background tracking
+- Battery optimization exemption
 
-Without the required permissions, real-time step counting and background tracking may not work properly.
+These permissions are required for accurate step counting, background tracking, notifications, and widget updates.
 
----
-
-# 🧠 How the App Works
-
-1. The app requests motion or activity recognition permission.
-2. After permission is granted, it listens to step sensor data.
-3. Step count is updated in real time.
-4. Daily step data is saved locally.
-5. Weekly and monthly activity history is generated from saved data.
-6. Distance, calories, and active minutes are calculated from step count.
-7. On Android, background service helps continue tracking.
-8. Widget support allows users to view step data from the home screen.
+If permissions are denied, some features may not work correctly.
 
 ---
 
-# 📊 Calculations Used
-
-The app estimates fitness metrics using simple formulas:
+## Project Structure
 
 ```text
-Distance:
-steps × 0.00075 = distance in km
-
-Calories:
-steps × 0.04 = calories burned
-
-Active Minutes:
-steps ÷ 120 = active minutes
+step-counter/
+│
+├── android/
+│   └── app/
+│       └── src/
+│           └── main/
+│               ├── AndroidManifest.xml
+│               └── kotlin/
+│                   └── com/
+│                       └── example/
+│                           └── step_counter_app/
+│                               ├── MainActivity.kt
+│                               ├── StepForegroundService.kt
+│                               └── StepCounterWidgetProvider.kt
+│
+├── ios/
+├── web/
+├── windows/
+├── macos/
+├── linux/
+├── test/
+│
+├── lib/
+│   ├── main.dart
+│   │
+│   └── src/
+│       └── modules/
+│           ├── step_tracker_controller.part.dart
+│           ├── settings.part.dart
+│           └── shared_widgets.part.dart
+│
+├── pubspec.yaml
+├── pubspec.lock
+├── analysis_options.yaml
+└── README.md
 ```
 
-These values are approximate and may vary depending on user height, weight, walking speed, and walking style.
+---
+
+## Important Files
+
+| File | Purpose |
+|---|---|
+| `lib/main.dart` | Main app entry point, UI layout, navigation, dashboard, activity, and goals screens |
+| `lib/src/modules/step_tracker_controller.part.dart` | Core step counting logic, storage, permissions, background service integration, alerts, and widget settings |
+| `lib/src/modules/settings.part.dart` | Settings screen, notification settings, background protection guide, and battery optimization help |
+| `lib/src/modules/shared_widgets.part.dart` | Shared reusable UI widgets |
+| `android/app/src/main/AndroidManifest.xml` | Android permissions, services, receivers, and widget declarations |
+| `android/app/src/main/kotlin/.../MainActivity.kt` | Flutter-to-Android native method channel bridge |
+| `android/app/src/main/kotlin/.../StepForegroundService.kt` | Android foreground service for background step tracking |
+| `android/app/src/main/kotlin/.../StepCounterWidgetProvider.kt` | Android widget provider implementation |
 
 ---
 
-# 🎨 UI/UX Design
+## How the App Works
 
-The app uses a modern fitness dashboard style.
-
-### Design Features
-
-- Smooth rounded cards
-- Circular step progress indicator
-- Clean bottom navigation
-- Light and dark theme support
-- Large readable typography
-- Fitness-focused interface
-- Responsive layout
-
-## Main Screens
-
-- Dashboard
-- Activity
-- Goals
-- Settings
+1. The app requests the required motion or activity recognition permission.
+2. After permission is granted, it starts listening to step sensor data.
+3. The step count updates in real time.
+4. Daily step values are stored locally using SharedPreferences.
+5. Weekly and monthly activity data are generated from saved records.
+6. Distance, calories, and active minutes are calculated from the step count.
+7. On Android, the foreground service helps continue tracking in the background.
+8. Widget support allows users to view step information from the home screen.
+9. Notification alerts can notify users when step milestones are reached.
 
 ---
 
-# 🧪 Testing Checklist
+## Build Commands
 
-Use this checklist before final release:
-
-- [ ] App runs successfully
-- [ ] Step permission request works
-- [ ] Real-time step counting works
-- [ ] Daily step count saves correctly
-- [ ] Weekly activity data displays correctly
-- [ ] Monthly activity data displays correctly
-- [ ] Distance calculation works
-- [ ] Calories calculation works
-- [ ] Active minutes update correctly
-- [ ] Daily goal progress works
-- [ ] Settings screen works
-- [ ] Step alert settings save correctly
-- [ ] Background tracking works on Android
-- [ ] Home widget option works
-- [ ] Dark mode UI looks good
-- [ ] App works after restart
-
----
-
-# 🚀 Build Commands
-
-## Android APK
+### Android APK
 
 ```bash
 flutter build apk --release
 ```
 
-## Android App Bundle
+### Android App Bundle
 
 ```bash
 flutter build appbundle --release
 ```
 
-## Web
+### Web
 
 ```bash
 flutter build web --release
 ```
 
-## Windows
+### Windows
 
 ```bash
 flutter build windows --release
 ```
 
----
-
-# ⚠️ Known Limitations
-
-- Step tracking depends on the device's physical step sensor.
-- Some devices may restrict background services.
-- Battery optimization may stop background tracking on some Android phones.
-- Web and desktop platforms may not support real physical step counting.
-- Calories and distance are estimated values.
-
----
-
-# 💡 Future Improvements
-
-Possible future updates:
-
-- User profile system
-- Height and weight-based calorie calculation
-- Daily, weekly, and monthly reports
-- Fitness achievement badges
-- Water reminder
-- Heart rate integration
-- Google Fit integration
-- Cloud sync support
-- More home screen widgets
-- Better charts and analytics
-- Export activity report as PDF
-- Custom step goals
-- Leaderboard or challenge system
-
----
-
-# 🐛 Troubleshooting
-
-## Step counter is not working
-
-Try the following commands:
+### Clean Build
 
 ```bash
 flutter clean
@@ -419,17 +440,88 @@ flutter pub get
 flutter run
 ```
 
-Also check:
+---
 
-- Activity permission is allowed
-- Notification permission is allowed
-- Battery optimization is disabled
-- Device has step sensor support
-- App is not restricted in background
+## Testing Checklist
+
+Use this checklist before final release or presentation:
+
+- [ ] App launches successfully
+- [ ] Step permission request works
+- [ ] Real-time step counting works
+- [ ] Daily step count updates correctly
+- [ ] Step count persists after app restart
+- [ ] Weekly activity data displays correctly
+- [ ] Monthly activity data displays correctly
+- [ ] Distance calculation works
+- [ ] Calories calculation works
+- [ ] Active minutes update correctly
+- [ ] Daily goal progress works
+- [ ] Goals screen works correctly
+- [ ] Settings screen works correctly
+- [ ] Step alert settings save correctly
+- [ ] Quiet hours work correctly
+- [ ] Notification permission works
+- [ ] Background tracking works on Android
+- [ ] Foreground service starts correctly
+- [ ] Home-screen widget displays step data
+- [ ] Widget refresh works correctly
+- [ ] Dark mode UI displays correctly
+- [ ] App works after device restart
+- [ ] Battery optimization guidance opens correctly
 
 ---
 
-## App does not run
+## Troubleshooting
+
+### Step Counter Is Not Working
+
+Run:
+
+```bash
+flutter clean
+flutter pub get
+flutter run
+```
+
+Then check:
+
+- Activity Recognition permission is allowed.
+- The device has a physical step counter sensor.
+- The app is not restricted in the background.
+- Battery optimization is disabled for the app.
+- The app has notification permission if using foreground service alerts.
+- You are testing on a physical Android device, not only an emulator.
+
+---
+
+### Background Tracking Stops
+
+Some Android devices aggressively restrict background services.
+
+Check:
+
+- Battery optimization is disabled for the app.
+- The app is allowed to run in the background.
+- Autostart permission is enabled if your device requires it.
+- The foreground service notification is visible.
+- The app is not manually stopped from system settings.
+
+---
+
+### Widget Does Not Update
+
+Check:
+
+- The app has been opened at least once.
+- Background tracking is enabled.
+- The widget is added correctly to the home screen.
+- Battery optimization is not blocking updates.
+- The device launcher supports widgets properly.
+
+---
+
+### App Does Not Run
 
 Run:
 
@@ -437,11 +529,18 @@ Run:
 flutter doctor -v
 ```
 
-Then fix any Flutter setup issues shown in the terminal.
+Fix any issues shown in the Flutter environment report.
+
+Then run:
+
+```bash
+flutter pub get
+flutter run
+```
 
 ---
 
-## Dependencies problem
+### Dependency Issues
 
 Run:
 
@@ -450,15 +549,74 @@ flutter pub get
 flutter pub upgrade
 ```
 
+If the issue continues, clean the project:
+
+```bash
+flutter clean
+flutter pub get
+```
+
 ---
 
-# 🤝 Contributing
+## Known Limitations
+
+- Step tracking depends on the device's physical step sensor.
+- Some emulators may not support real step sensor data.
+- Background tracking behavior may differ across Android manufacturers.
+- Battery optimization can stop background services on some devices.
+- Web and desktop platforms may not support real physical step counting.
+- Distance and calorie values are estimates, not medical measurements.
+- Widget behavior may vary depending on launcher and Android version.
+
+---
+
+## Privacy and Data Storage
+
+The app stores step-related data locally on the user's device using SharedPreferences.
+
+The project does not require a cloud database for core functionality.
+
+Recommended privacy practices:
+
+- Do not collect unnecessary personal data.
+- Keep health and activity data stored securely.
+- Inform users about required permissions.
+- Use step and health data only for fitness tracking purposes.
+- Follow applicable privacy and platform guidelines before publishing.
+
+---
+
+## Future Improvements
+
+Although the core project is complete, the following features can be added in future versions:
+
+- User profile setup
+- Height and weight-based calorie calculation
+- Custom stride length support
+- Daily, weekly, and monthly reports
+- Achievement badges
+- Streak tracking
+- Water reminder
+- Heart rate integration
+- Google Fit integration
+- Cloud sync support
+- More home-screen widget layouts
+- Improved charts and analytics
+- Export activity report as PDF
+- Export activity report as CSV
+- Leaderboard or challenge system
+- Wear OS support
+
+---
+
+## Contributing
 
 Contributions are welcome.
 
 To contribute:
 
 1. Fork the repository
+
 2. Create a new branch
 
 ```bash
@@ -481,37 +639,42 @@ git push origin feature/new-feature
 
 ---
 
-# 👨‍💻 Developer
+## Developer
 
 **Mehedi Hasan**
 
 - GitHub: [@mehedi77k](https://github.com/mehedi77k)
-- Project: Step Counter App
-- Built with Flutter and Dart
+- Repository: [step-counter](https://github.com/mehedi77k/step-counter)
+- Project: Step Counter - Kinetic Pulse
+- Built with Flutter, Dart, and Android native support
 
 ---
 
-# 📞 Support
-
-If you face any issue or have suggestions, please open an issue in the GitHub repository.
-
-Repository:  
-https://github.com/mehedi77k/step-counter
-
----
-
-# 📌 Project Status
+## Project Status
 
 ```text
-Status: Active Development
+Status: Completed
 Version: 1.0.0+1
-Platform: Flutter
+Project Type: Fitness Tracking Application
+Framework: Flutter
 Main Language: Dart
+Native Android Language: Kotlin
+Primary Platform: Android
+Storage: Local SharedPreferences
 ```
 
 ---
 
-# ⭐ Show Your Support
+## Support
 
-If you like this project, please give it a star on GitHub.
+For issues, suggestions, or improvements, open an issue in the GitHub repository:
 
+```text
+https://github.com/mehedi77k/step-counter/issues
+```
+
+---
+
+## Show Your Support
+
+If this project is useful, consider giving it a star on GitHub.
